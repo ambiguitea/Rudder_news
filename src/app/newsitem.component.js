@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -11,16 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var NewsItem = (function () {
-    function NewsItem() {
+var NEWSITEMS = [
+    { id: 1, state: 1, date: new Date(2017, 5, 31), text: "This is an item of news" },
+    { id: 2, state: 1, date: new Date(2017, 6, 5), text: "This is another item of news" },
+    { id: 3, state: 1, date: new Date(2017, 6, 12), text: "More news goes here" },
+    { id: 4, state: 1, date: new Date(2017, 6, 17), text: "Some more exciting news." }
+];
+var NewsItemComponent = (function () {
+    function NewsItemComponent() {
+        this.newsitems = NEWSITEMS;
     }
-    return NewsItem;
+    return NewsItemComponent;
 }());
-NewsItem = __decorate([
+NewsItemComponent = __decorate([
     core_1.Component({
-        selector: 'newsitem',
-        template: "\n    <p class=\"news-text\"></p>\n    <input type=\"button\" value=\"Edit\" />\n    <input type=\"button\" value=\"Delete\" />\n  ",
+        selector: 'ex-newsitem',
+        template: "\n  <ul>\n    <li *ngFor=\"let newsItem of newsitems\">\n    <p>ID: {{newsItem.id}}</p>\n    <p>Date: {{newsItem.date}}</p>\n    <p>{{newsItem.text}}</p>\n    <input type=\"button\" value=\"Edit\" />\n    <input type=\"button\" value=\"Delete\" />\n    </li>\n  </ul>\n  "
     })
-], NewsItem);
-exports.NewsItem = NewsItem;
+], NewsItemComponent);
+exports.NewsItemComponent = NewsItemComponent;
 //# sourceMappingURL=newsitem.component.js.map

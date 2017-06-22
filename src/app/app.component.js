@@ -14,7 +14,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'new-newsitem',
-        template: "\n    <input type=\"text\" />\n    <input type=\"button\" value=\"Save\" />\n    <input type=\"button\" value=\"Discard\" />\n     \n  ",
+        template: "\n    <div class=\"newNews\">\n        <label>News:</label>\n        <input id=\"news-text\" type=\"text\" />\n        <input type=\"button\" value=\"Save\" />\n        <input type=\"button\" value=\"Discard\" />\n     </div>\n  ",
+        styles: ["\n    .newNews {\n        margin: 40px 2.5%;\n        width: 95%;\n    }\n  \n    #news-text, label, div {\n        width: 100%;\n    }   \n    \n    div {\n        display: flex;\n        flex-wrap: wrap;\n    }\n    \n    #news-text {\n        height: 200px;\n    }\n    \n\n  "]
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

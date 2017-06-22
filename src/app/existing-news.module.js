@@ -7,18 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var AppModule = (function () {
-    function AppModule() {
+var newsitem_component_1 = require("./newsitem.component");
+var ExistingNewsModule = (function () {
+    function ExistingNewsModule() {
     }
-    return AppModule;
+    return ExistingNewsModule;
 }());
-AppModule = __decorate([
+ExistingNewsModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent],
-        bootstrap: [app_component_1.AppComponent]
+        declarations: [newsitem_component_1.NewsItemComponent],
+        bootstrap: [newsitem_component_1.NewsItemComponent]
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], ExistingNewsModule);
+exports.ExistingNewsModule = ExistingNewsModule;
+//# sourceMappingURL=existing-news.module.js.map
